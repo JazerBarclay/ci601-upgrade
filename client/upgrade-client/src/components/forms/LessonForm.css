@@ -1,0 +1,28 @@
+#lessonsFormRibbon {
+    grid-column: 1 / span 4;
+    margin: 6px 0;
+}
+
+#lessonsForm {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto 1fr auto 1fr;
+    grid-gap: 12px 16px;
+}
+
+#lessonsForm h3 {
+    grid-column: 1 / span 4;
+    margin-bottom: 8px;
+}
+
+#lessonsForm button {
+    margin: 0 6px;
+}
+
+#lessonsForm .btn-primary {
+    background-color: var(--primary-color);
+}
+
+#lessonsForm .btn-primary:hover {
+    background-color: var(--secondary-color);
+}

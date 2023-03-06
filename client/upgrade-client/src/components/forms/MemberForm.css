@@ -1,0 +1,70 @@
+#membersForm {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto 1fr auto 1fr;
+    grid-gap: 12px 16px;
+}
+
+#membersForm > input[type="checkbox"] {
+    justify-self: start;
+}
+
+#membersForm h3 {
+    grid-column: 1 / span 4;
+    margin-bottom: 8px;
+}
+
+#membersForm button {
+    margin: 0 6px;
+}
+
+#membersFormRibbon {
+    grid-column: 1 / span 4;
+    margin: 6px 0;
+}
+
+#membersForm > textarea {
+    grid-column: 1 / span 4;
+    min-height: 60px;
+    resize: none;
+}
+
+#membersForm .btn-primary {
+    background-color: var(--primary-color);
+}
+#membersForm .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 960px) {
+    #membersForm {
+        grid-template-columns: auto 1fr;
+    }
+
+    #membersForm h3 {
+        grid-column: 1 / span 2;
+    }
+    #membersForm > textarea {
+        grid-column: 1 / span 2;
+    }
+    #membersFormRibbon {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #membersForm {
+        grid-template-columns: auto 1fr auto 1fr 1fr;
+    }
+    #notesHeader {
+        grid-column: 5 / span 1 !important;
+        grid-row: 1 / span 1;
+    }
+    #membersForm > textarea {
+        grid-column: 5 / span 1;
+        grid-row: 2 / span 7;
+    }
+    #membersFormRibbon {
+        grid-column: 1 / span 5;
+    }
+}

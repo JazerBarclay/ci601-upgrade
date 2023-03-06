@@ -1,0 +1,163 @@
+.appContainer {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1rem 1rem;
+    grid-template-rows: auto;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+header > h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    /*   padding: 20px; */
+    /*   right: 0; */
+    right: -400px;
+    /* height: calc(100vh - 0px); */
+    width: calc(100vw - 0px);
+    max-width: calc(400px - 0px);
+    color: white;
+    background-color: #121212;
+    box-shadow: inset 5px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul a {
+    display: block;
+    color: var(--primary-color);
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav ul a:hover {
+    background-color: var(--gray) !important;
+    color: #fff !important;
+    transition: 0.2s;
+}
+
+.navActive {
+    background-color: red;
+    outline: 1px dotted red;
+}
+
+.logoutButton {
+    padding: 1rem;
+    background: red;
+    color: #fff;
+    width: calc(100% - 2rem);
+    text-align: center;
+    transition: .2s;
+}
+
+.logoutButton:hover {
+    background: var(--secondary-color);
+    color: var(--black);
+    transition: .2s;
+}
+
+main {
+    grid-area: main;
+    color: white;
+    background-color: #191919;
+    padding: 1rem;
+    min-height: calc(100% - 2rem);
+    z-index: 1;
+}
+
+main > h1 {
+    color: var(--light)
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--gray);
+    color: var(--light-gray);
+    padding: 1rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.scroll-container {
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.h-scroll-container {
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.v-scroll-container {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+@media only screen and (min-width: 768px) {
+    .appContainer {
+        max-height: 100vh;
+        grid-template-columns: minmax(200px, 1fr) 3fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "nav footer";
+    }
+
+    nav {
+        position: relative;
+        left: 0;
+        width: calc(100% - 0px);
+        max-width: none;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .appContainer {
+        grid-template-columns: 320px 2fr;
+    }
+}
+
+.ribbon-left {
+    display: flex;
+    justify-content: flex-start;
+}
+.ribbon-right {
+    display: flex;
+    justify-content: flex-end;
+}
