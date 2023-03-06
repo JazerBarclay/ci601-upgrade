@@ -1,19 +1,14 @@
 // Import database connection
-const db = require('../../database/dbConnection')
+const db = require("../../database/dbConnection");
 
 // Database CREATE, READ, UPDATE, DELETE (CRUD) operations
 module.exports = {
-
     // Select all members
     selectAllMembers: (callBack) => {
-        db.query(
-            `SELECT * FROM members;`,
-            [],
-            (error, results, fields) => {
-                if (error) return callBack(error);
-                return callBack(null, results);
-            }
-        );
+        db.query(`SELECT * FROM members;`, [], (error, results, fields) => {
+            if (error) return callBack(error);
+            return callBack(null, results);
+        });
     },
 
     selectMemberById: (memberId, callBack) => {
@@ -21,7 +16,7 @@ module.exports = {
             `
             SELECT * FROM members WHERE id = $1;
             `,
-            [ memberId ],
+            [memberId],
             (error, results, fields) => {
                 if (error) return callBack(error);
                 return callBack(null, results);
@@ -34,11 +29,9 @@ module.exports = {
             `
             SELECT * FROM members
             WHERE first_name LIKE $1
-            OR middle_names LIKE $1
             OR last_name LIKE $1
-            OR nickname LIKE $1;
             `,
-            [ '%'+memberName+'%'],
+            ["%" + memberName + "%"],
             (error, results, fields) => {
                 if (error) return callBack(error);
                 return callBack(null, results);
@@ -47,34 +40,53 @@ module.exports = {
     },
 
     insertMember: (
-        firstName, middleNames, lastName, 
-        nickname, dob, contactNumber, altNumber, 
-        emailAddress, contactByEmail, callback) => 
-    {
+        firstName,
+        lastName,
+        contactNumber,
+        emailAddress,
+        grade,
+        licensed,
+        outstanding,
+        contactByEmail,
+        primaryContact,
+        primaryContactNumber,
+        secondaryContact,
+        secondaryContactNumber,
+        notes,
+        callback
+    ) => {
         db.query(
             `INSERT INTO members (
                 first_name,
-                middle_names,
                 last_name,
-                nickname,
-                date_of_birth,
                 contact_number,
-                alt_number,
                 email_address,
-                contact_by_email
+                grade,
+                licensed,
+                outstanding,
+                contact_by_email,
+                primary_contact,
+                primary_contact_number,
+                secondary_contact,
+                secondary_contact_number,
+                notes
             ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7, $8, $9
+                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
             );`,
             [
-                firstName, 
-                middleNames, 
-                lastName, 
-                nickname,
-                dob,
+                firstName,
+                lastName,
                 contactNumber,
-                altNumber,
                 emailAddress,
-                contactByEmail
+                grade,
+                licensed,
+                outstanding,
+                contactByEmail,
+                primaryContact,
+                primaryContactNumber,
+                secondaryContact,
+                secondaryContactNumber,
+                notes,
             ],
             (error, results, fields) => {
                 if (error) return callback(error);
@@ -84,35 +96,55 @@ module.exports = {
     },
 
     updateMember: (
-        firstName, middleNames, lastName, 
-        nickname, dob, contactNumber, altNumber, 
-        emailAddress, contactByEmail, member_id, callback) => 
-    {
+        firstName,
+        lastName,
+        contactNumber,
+        emailAddress,
+        grade,
+        licensed,
+        outstanding,
+        contactByEmail,
+        primaryContact,
+        primaryContactNumber,
+        secondaryContact,
+        secondaryContactNumber,
+        notes,
+        id,
+        callback
+    ) => {
         db.query(
             `
             UPDATE members
             SET first_name = $1,
-                middle_names = $2,
-                last_name = $3,
-                nickname = $4,
-                date_of_birth = $5,
-                contact_number = $6,
-                alt_number = $7,
-                email_address = $8,
-                contact_by_email = $9
-            WHERE id = $10;
+                last_name = $2,
+                contact_number = $3,
+                email_address = $4,
+                grade = $5,
+                licensed = $6,
+                outstanding = $7,
+                contact_by_email = $8,
+                primary_contact = $9,
+                primary_contact_number = $10,
+                secondary_contact = $11,
+                secondary_contact_number = $12,
+                notes = $13
+            WHERE id = $14;
             `,
             [
-                firstName, 
-                middleNames, 
-                lastName, 
-                nickname,
-                dob,
+                firstName,
+                lastName,
                 contactNumber,
-                altNumber,
                 emailAddress,
+                grade,
+                licensed,
+                outstanding,
                 contactByEmail,
-                member_id
+                primaryContact,
+                primaryContactNumber,
+                secondaryContact,
+                secondaryContactNumber,
+                notes,
+                id
             ],
             (error, results, fields) => {
                 if (error) return callback(error);
@@ -120,5 +152,4 @@ module.exports = {
             }
         );
     },
-
-}
+};
