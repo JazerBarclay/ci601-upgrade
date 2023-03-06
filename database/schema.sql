@@ -23,22 +23,18 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS members (
     id SERIAL PRIMARY KEY,
     first_name TEXT NOT NULL,
-    middle_names TEXT,
-    last_name TEXT,
-    nickname TEXT,
-    date_of_birth TIMESTAMP,
+    last_name TEXT NOT NULL,
     contact_number TEXT,
-    alt_number TEXT,
     email_address TEXT,
+    grade TEXT,
+    licensed BOOLEAN,
+    outstanding TEXT,
+    primary_contact TEXT,
+    primary_contact_number TEXT,
+    secondary_contact TEXT,
+    secondary_contact_number TEXT,
+    notes TEXT,
     contact_by_email BOOLEAN
-);
-
--- References between customers and their contacts such as parents, guardians
-CREATE TABLE IF NOT EXISTS member_contacts (
-    member_id INTEGER NOT NULL REFERENCES members(id),
-    contact_id INTEGER NOT NULL REFERENCES members(id),
-    contact_reference TEXT,
-    PRIMARY KEY(member_id, contact_id)
 );
 
 ----==== PAYMENTS ====----
@@ -142,6 +138,7 @@ CREATE TABLE IF NOT EXISTS attendees (
     lesson_id INTEGER NOT NULL REFERENCES lessons(id),
     member_id INTEGER NOT NULL REFERENCES members(id),
     token_id INTEGER REFERENCES tokens(id),
+    attendance_date TIMESTAMP NOT NULL DEFAULT now(),
     PRIMARY KEY(lesson_id, member_id)
 );
 
@@ -157,3 +154,15 @@ LEFT JOIN lesson_types
 ON lesson_pricing.lesson_type_id = lesson_types.id
 LEFT JOIN lesson_purchase_types
 ON lesson_pricing.lesson_purchase_type_id = lesson_purchase_types.id;
+
+CREATE OR REPLACE VIEW all_payments AS
+SELECT members.first_name, 
+    members.last_name, 
+    payment_methods.type_name, 
+    payments.amount, 
+    payments.payment_date
+FROM payments
+LEFT JOIN payment_methods
+ON payments.method_id = payment_methods.id
+LEFT JOIN members
+ON payments.member_id = members.id;

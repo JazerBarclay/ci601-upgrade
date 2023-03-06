@@ -120,7 +120,7 @@ INSERT INTO users (
     type
 ) VALUES (
     'admin', 
-    'password', 
+    '$2b$05$TjDOIoPwtKz.Nc21nUyld.e6rV9lWFLknRdyTY0993qlsvnsGbiHa', 
     (SELECT id FROM user_types WHERE type_name = 'admin' LIMIT 1)
 );
 
@@ -142,7 +142,7 @@ INSERT INTO users (
     created_by
 ) VALUES (
     'dan', 
-    'a1b2c3', 
+    '$2b$05$nbIHnnSx4WkD48SNo/ZfEePiylwK57gHW.NjEaLJ8mPrwiZmO6U3m', 
     (SELECT id FROM user_types WHERE type_name = 'manager' LIMIT 1),
     (SELECT id from users WHERE username = 'admin' LIMIT 1)
 );
@@ -150,40 +150,37 @@ INSERT INTO users (
 
 INSERT INTO members (
     first_name,
-    middle_names,
     last_name,
-    nickname,
     contact_number,
-    email_address
+    email_address,
+    grade,
+    licensed,
+    outstanding,
+    primary_contact,
+    primary_contact_number,
+    contact_by_email
 ) VALUES (
     'Jazer',
-    'John',
     'Barclay',
-    'Jazz',
     '07759228812',
-    'jazerbarclay@hotmail.com'
+    'jazerbarclay@hotmail.com',
+    'Red',
+    false,
+    '0',
+    'John',
+    '07759228812',
+    true
 ), (
     'Sophie',
-    'Leanne',
     'Ryan',
-    'Soph',
     '07761044488',
-    'sophieryan6996@gmail.com'
-);
-
-
-INSERT INTO member_contacts (
-    member_id,
-    contact_id,
-    contact_reference
-) VALUES (
-    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
-    (SELECT id FROM members WHERE first_name = 'Sophie' LIMIT 1),
-    'Girlfriend'
-),(
-    (SELECT id FROM members WHERE first_name = 'Sophie' LIMIT 1),
-    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
-    'Boyfriend'
+    'sophieryan6996@gmail.com',
+    'Yellow',
+    true,
+    '0',
+    'David',
+    '07759228812',
+    true
 );
 
 
@@ -251,6 +248,11 @@ INSERT INTO lessons (
     end_time
 ) VALUES (
     (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)' LIMIT 1),
+    CURRENT_DATE,
+    (SELECT now() + interval '2 hours'),
+    (SELECT now() + interval '3 hours')
+),(
+    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Kids)' LIMIT 1),
     CURRENT_DATE,
     (SELECT now() + interval '2 hours'),
     (SELECT now() + interval '3 hours')
