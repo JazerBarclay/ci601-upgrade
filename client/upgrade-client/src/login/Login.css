@@ -20,6 +20,13 @@
     width: 360px;
 }
 
+.loginForm > span {
+    display: none;
+    color: red;
+    margin: 1rem 0 0rem;
+    text-align: center;
+}
+
 .login-input-label {
     margin-top: 0.6rem;
     color: var(--light);
@@ -51,6 +58,12 @@
     color: var(--dark);
     background-color: var(--secondary-color);
     transition: 0.2s;
+}
+
+.btn:disabled {
+    color: var(--white);
+    background-color: var(--light);
+    cursor: default;
 }
 
 .btn-login {

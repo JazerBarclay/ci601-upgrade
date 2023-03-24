@@ -3,16 +3,29 @@ const {
     selectAllMembers,
     selectMemberById,
     insertMember,
-    updateMember
+    updateMember,
+    selectTotalMembers,
+    selectTotalSignupsToday,
+    selectTotalSignupsWeek,
+    selectTotalSignupsMonth,
+    selectTotalSignupsYear,
 } = require("./memberService");
 
 module.exports = {
+    
+    returnMemberId: (req, res) => {
+        return res.status(201).json({ id: req.params.id });
+    },
+
     // Returns the user requested by the username in get request
-    getMembers: (req, res) => {
+    returnAllMembers: (req, res) => {
         selectAllMembers((err, response) => {
-            if (err) return res.status(500).json({ error: "bad request" });
+            if (err)
+                return res
+                    .status(500)
+                    .json({ error: "failed to process request" });
             if (response.rows.length < 1)
-                return res.status(404).json({ error: "no results" });
+                return res.status(404).json({ error: "no results found" });
             return res.status(200).json({
                 members: response.rows,
             });
@@ -20,7 +33,7 @@ module.exports = {
     },
 
     // Returns the user requested by the username in get request
-    getMembersById: (req, res) => {
+    returnMemberById: (req, res) => {
         selectMemberById(req.params.id, (err, response) => {
             if (err) return res.status(400).json({ error: "bad request" });
             if (response.rows.length < 1)
@@ -32,7 +45,67 @@ module.exports = {
     },
 
     // Returns the user requested by the username in get request
-    addMember: (req, res) => {
+    returnTotalMembers: (req, res) => {
+        selectTotalMembers((err, response) => {
+            if (err) return res.status(400).json({ error: "bad request" });
+            if (response.rows.length < 1)
+                return res.status(404).json({ error: "no results" });
+            return res.status(200).json({
+                total: response.rows[0].members,
+            });
+        });
+    },
+
+    // Returns the user requested by the username in get request
+    returnTotalSignupsToday: (req, res) => {
+        selectTotalSignupsToday((err, response) => {
+            if (err) return res.status(400).json({ error: "bad request" });
+            if (response.rows.length < 1)
+                return res.status(404).json({ error: "no results" });
+            return res.status(200).json({
+                total: response.rows[0].signups,
+            });
+        });
+    },
+
+    // Returns the user requested by the username in get request
+    returnTotalSignupsWeek: (req, res) => {
+        selectTotalSignupsWeek((err, response) => {
+            if (err) return res.status(400).json({ error: "bad request" });
+            if (response.rows.length < 1)
+                return res.status(404).json({ error: "no results" });
+            return res.status(200).json({
+                total: response.rows[0].signups,
+            });
+        });
+    },
+
+    // Returns the user requested by the username in get request
+    returnTotalSignupsMonth: (req, res) => {
+        selectTotalSignupsMonth((err, response) => {
+            if (err) return res.status(400).json({ error: "bad request" });
+            if (response.rows.length < 1)
+                return res.status(404).json({ error: "no results" });
+            return res.status(200).json({
+                total: response.rows[0].signups,
+            });
+        });
+    },
+
+    // Returns the user requested by the username in get request
+    returnTotalSignupsYear: (req, res) => {
+        selectTotalSignupsYear((err, response) => {
+            if (err) return res.status(400).json({ error: "bad request" });
+            if (response.rows.length < 1)
+                return res.status(404).json({ error: "no results" });
+            return res.status(200).json({
+                total: response.rows[0].signups,
+            });
+        });
+    },
+
+    // Returns the user requested by the username in get request
+    addMember: (req, res, next) => {
         insertMember(
             req.body.first_name,
             req.body.last_name,
@@ -49,14 +122,17 @@ module.exports = {
             req.body.notes,
             (err, response) => {
                 if (err)
-                    return res.status(400).json({ error: "bad request", err });
-                return res.status(201).json();
+                    return res
+                        .status(500)
+                        .json({ error: "failed to insert new member", err });
+                req.params.id = response.rows[0].id;
+                return next();
             }
         );
     },
 
     // Returns the user requested by the username in get request
-    editMember: (req, res) => {
+    editMember: (req, res, next) => {
         updateMember(
             req.body.first_name,
             req.body.last_name,
@@ -75,7 +151,8 @@ module.exports = {
             (err, response) => {
                 if (err)
                     return res.status(400).json({ error: "bad request", err });
-                return res.status(200).json();
+                    req.params.id = Number(req.params.id);
+                return next();
             }
         );
     },

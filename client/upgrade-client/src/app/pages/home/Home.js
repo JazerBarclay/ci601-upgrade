@@ -15,9 +15,9 @@ import "./Home.css";
 
 const Home = () => {
     const [todaysTotal, setTodaysTotal] = useState("0");
+    const [weeksTotal, setWeeksTotal] = useState("0");
     const [todaysAttendees, setTodaysAttendees] = useState("0");
-    const [currentLesson, setCurrentLesson] = useSßtate("N/A");
-    const [nextLesson, setNextLesson] = useState("N/A");
+    const [weeksAttendees, setWeeksAttendees] = useState("N/A");
 
     const incomeData = [
         {
@@ -95,44 +95,59 @@ const Home = () => {
         },
     ];
 
-    // Todays Total
+    // Get statistics
     useEffect(() => {
-        fetch(`${config.SERVER_IP}/payments`)
+
+        fetch(`${config.SERVER_IP}/payments/total/today`)
             .then((data) => data.json())
             .then((data) => {
-                let total = 0;
-                data.payments.map((payment) => {
-                    total += payment.amount;
-                });
+                let total = data.total;
                 setTodaysTotal(total / 100);
             })
             .catch((err) => {
                 console.log(err);
             });
 
-        fetch(`${config.SERVER_IP}/attendance/today`)
+        fetch(`${config.SERVER_IP}/payments/total/week`)
             .then((data) => data.json())
             .then((data) => {
-                let total = 0;
-                data.attendees.map((members) => {
-                    total += 1;
-                });
+                let total = data.total;
+                setWeeksTotal(total / 100);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+        fetch(`${config.SERVER_IP}/attendance/total/today`)
+            .then((data) => data.json())
+            .then((data) => {
+                let total = data.total;
                 setTodaysAttendees(total);
             })
             .catch((err) => {
                 console.log(err);
             });
+
+        fetch(`${config.SERVER_IP}/attendance/total/week`)
+            .then((data) => data.json())
+            .then((data) => {
+                let total = data.total;
+                setWeeksAttendees(total);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
     }, []);
 
     return (
         <main className="homePage">
-            <h1>Up-Grade Martial Arts</h1>
-            <h2>Today - {new Date().toDateString()}</h2>
+            <h1>Today - {new Date().toDateString()}</h1>
             <CardCollection>
-                <Card title={"Income"} info={`£${todaysTotal}`} />
-                <Card title={"Attendees"} info={todaysAttendees} />
-                <Card title={"Current Lesson"} info={currentLesson} />
-                <Card title={"Next Lesson"} info={nextLesson} />
+                <Card title={"Income Today"} info={`£${todaysTotal}`} />
+                <Card title={"Income Week"} info={`£${weeksTotal}`} />
+                <Card title={"Attendees Today"} info={todaysAttendees} />
+                <Card title={"Attendees Week"} info={weeksAttendees} />
             </CardCollection>
 
             <h2>Income - Weekly</h2>

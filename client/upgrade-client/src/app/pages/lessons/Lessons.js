@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Table from "../../../components/tables/Table";
-import LessonForm from "../../../components/forms/LessonForm";
+import LessonForm from "./LessonForm";
 import config from "../../../config";
 
 const Lessons = () => {
@@ -29,8 +29,6 @@ const Lessons = () => {
     };
 
     const getLessonsFromServer = async () => {
-        let lessonsTable = [];
-
         if (lessonTypes.size === 0) return;
 
         await fetch(`${config.SERVER_IP}/lessons`)
@@ -95,8 +93,8 @@ const Lessons = () => {
                     headings={["Lesson Type", "Date", "Start Time", "End Time"]}
                     rows={Array.from(lessons, ([id, data]) => [
                         id,
-                        lessonTypes.get(data.type).type_name,
-                        data.lesson_date.split("T")[0],
+                        lessonTypes.get(data.type_id).name,
+                        data.date.split("T")[0],
                         data.start_time.split(".")[0],
                         data.end_time.split(".")[0],
                     ])}

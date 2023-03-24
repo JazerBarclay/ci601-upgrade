@@ -1,8 +1,8 @@
 import "./Card.css";
 
-const Card = ({title, info}) => {
+const Card = ({title, info, spanX, spanY}) => {
     return (
-        <div className="card">
+        <div style={{ gridColumn: `span ${spanX}`, gridRow: `span ${spanY}` }}className="card">
             <h2>{title}</h2>
             <p>{info}</p>
         </div>

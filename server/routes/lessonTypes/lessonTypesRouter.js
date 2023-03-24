@@ -1,7 +1,7 @@
-const { getLessonTypes } = require('./lessonTypesController');
+const { returnAllLessonTypes } = require('./lessonTypesController');
 
 const router = require('express').Router();
 
-router.get('/', getLessonTypes);
+router.get('/', returnAllLessonTypes);
 
 module.exports = router;

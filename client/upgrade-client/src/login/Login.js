@@ -1,9 +1,14 @@
+import { useState } from "react";
 import Logo from "../assets/martial-arts-gym-bexhill-logo.png";
 import "./Login.css";
 
 import { requestLogin } from "../components/api/loginRequest";
 
 const Login = ({ setToken }) => {
+
+
+    const [display, setDisplay] = useState("none");
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -13,7 +18,9 @@ const Login = ({ setToken }) => {
         );
 
         if (responseToken) setToken({ token: responseToken });
+        else setDisplay("block");
     };
+
 
     return (
         <div className="loginContainer">
@@ -35,6 +42,7 @@ const Login = ({ setToken }) => {
                         className="input-text"
                         required
                     />
+                    <span style={{ display }} >Username or password incorrect.<br/> Please try again.</span>
                     <button
                         type="submit"
                         id="loginButton"

@@ -2,7 +2,7 @@
 
 -- Add default user types
 INSERT INTO user_types (
-    type_name
+    name
 ) VALUES (
     'admin'
 ), (
@@ -13,7 +13,7 @@ INSERT INTO user_types (
 
 -- Add default methods of payment
 INSERT INTO payment_methods (
-    type_name
+    name
 ) VALUES (
     'Cash'
 ), (
@@ -22,7 +22,7 @@ INSERT INTO payment_methods (
 
 -- Add default lesson types
 INSERT INTO lesson_types (
-    type_name
+    name
 ) VALUES (
     'Boxing (Kids)'
 ), (
@@ -37,17 +37,38 @@ INSERT INTO lesson_types (
 
 
 INSERT INTO lesson_purchase_types (
-    purchase_type_name
+    name,
+    duration_days,
+    weeks,
+    multiplier
 ) VALUES (
-    'Single'
+    -- should make 1 weekly token for 1 week
+    'Single',
+    7,
+    1,
+    1
 ), (
-    'Monthly (Single)'
+    -- should make 1 weekly token every week for 4 weeks
+    'Monthly (Single)',
+    7,
+    4,
+    1
 ), (
-    'Monthly (Double)'
+    -- should make 2 weekly token every week for 4 weeks
+    'Monthly (Double)',
+    7,
+    4,
+    2
 ), (
-    'Monthly (Triple)'
+    'Monthly (Triple)',
+    7,
+    4,
+    3
 ), (
-    'Monthly (Unlimited)'
+    'Monthly (Unlimited)',
+    7,
+    4,
+    7
 );
 
 
@@ -56,60 +77,60 @@ INSERT INTO lesson_pricing (
     lesson_purchase_type_id,
     price
 ) VALUES (
-    (SELECT id FROM lesson_types WHERE type_name = 'Boxing (Kids)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Single'),
+    (SELECT id FROM lesson_types WHERE name = 'Boxing (Kids)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single'),
     500
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Boxing (Kids)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Single)'),
+    (SELECT id FROM lesson_types WHERE name = 'Boxing (Kids)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Single)'),
     1800
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Boxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Single'),
+    (SELECT id FROM lesson_types WHERE name = 'Boxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single'),
     600
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Boxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Single)'),
+    (SELECT id FROM lesson_types WHERE name = 'Boxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Single)'),
     2200
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Boxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Double)'),
+    (SELECT id FROM lesson_types WHERE name = 'Boxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Double)'),
     4000
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Kids)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Single'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single'),
     500
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Kids)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Single)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Single)'),
     1800
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Kids)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Double)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Double)'),
     3600
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Single'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single'),
     600
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Single)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Single)'),
     2200
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Double)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Double)'),
     4000
 ), (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Triple)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Triple)'),
     5500
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Monthly (Unlimited)'),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Monthly (Unlimited)'),
     6000
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Yoga'),
-    (SELECT id FROM lesson_purchase_types WHERE purchase_type_name = 'Single'),
+    (SELECT id FROM lesson_types WHERE name = 'Yoga'),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single'),
     700
 );
 
@@ -121,7 +142,7 @@ INSERT INTO users (
 ) VALUES (
     'admin', 
     '$2b$05$TjDOIoPwtKz.Nc21nUyld.e6rV9lWFLknRdyTY0993qlsvnsGbiHa', 
-    (SELECT id FROM user_types WHERE type_name = 'admin' LIMIT 1)
+    (SELECT id FROM user_types WHERE name = 'admin' LIMIT 1)
 );
 
 -- Add genesis admin account created by itself
@@ -143,7 +164,7 @@ INSERT INTO users (
 ) VALUES (
     'dan', 
     '$2b$05$nbIHnnSx4WkD48SNo/ZfEePiylwK57gHW.NjEaLJ8mPrwiZmO6U3m', 
-    (SELECT id FROM user_types WHERE type_name = 'manager' LIMIT 1),
+    (SELECT id FROM user_types WHERE name = 'manager' LIMIT 1),
     (SELECT id from users WHERE username = 'admin' LIMIT 1)
 );
 
@@ -242,35 +263,61 @@ INSERT INTO products (
 
 
 INSERT INTO lessons (
-    type,
-    lesson_date,
+    type_id,
+    date,
     start_time,
     end_time
 ) VALUES (
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Adults)' LIMIT 1),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Adults)' LIMIT 1),
     CURRENT_DATE,
-    (SELECT now() + interval '2 hours'),
-    (SELECT now() + interval '3 hours')
+    (SELECT CURRENT_DATE + interval '10 hours'),
+    (SELECT CURRENT_DATE + interval '12 hours')
 ),(
-    (SELECT id FROM lesson_types WHERE type_name = 'Kickboxing (Kids)' LIMIT 1),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)' LIMIT 1),
     CURRENT_DATE,
-    (SELECT now() + interval '2 hours'),
-    (SELECT now() + interval '3 hours')
+    (SELECT CURRENT_DATE + interval '12 hours'),
+    (SELECT CURRENT_DATE + interval '15 hours')
 );
 
 
 INSERT INTO payments (
     member_id,
     method_id,
-    amount
+    total
 ) VALUES (
     (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
-    (SELECT id FROM payment_methods WHERE type_name = 'Cash' LIMIT 1),
+    (SELECT id FROM payment_methods WHERE name = 'Cash' LIMIT 1),
     3000
 ), (
     (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
-    (SELECT id FROM payment_methods WHERE type_name = 'Cash' LIMIT 1),
-    0
+    (SELECT id FROM payment_methods WHERE name = 'Cash' LIMIT 1),
+    500
+), (
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM payment_methods WHERE name = 'Cash' LIMIT 1),
+    400
+), (
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM payment_methods WHERE name = 'Cash' LIMIT 1),
+    300
+), (
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM payment_methods WHERE name = 'Cash' LIMIT 1),
+    200
+);
+
+INSERT INTO lesson_purchases (
+    member_id,
+    lesson_type_id,
+    purchase_type_id,
+    price,
+    payment_id
+) VALUES (
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)' LIMIT 1),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single' LIMIT 1),
+    500,
+    (SELECT id FROM payments WHERE total = 500 LIMIT 1)
 );
 
 
@@ -281,13 +328,32 @@ INSERT INTO product_purchases (
     price
 ) VALUES (
     (SELECT id FROM products WHERE name = 'T-Shirt' LIMIT 1),
-    (SELECT id FROM payments WHERE amount = 3000 LIMIT 1),
+    (SELECT id FROM payments WHERE total = 3000 LIMIT 1),
     1,
     1500
 ), (
     (SELECT id FROM products WHERE name = 'Trousers' LIMIT 1),
-    (SELECT id FROM payments WHERE amount = 3000 LIMIT 1),
+    (SELECT id FROM payments WHERE total = 3000 LIMIT 1),
     1,
     1500
 );
 
+INSERT INTO tokens (
+    member_id,
+    lesson_type_id,
+    lesson_purchase_id
+) VALUES (
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM lesson_types WHERE name = 'Kickboxing (Kids)' LIMIT 1),
+    (SELECT id FROM lesson_purchase_types WHERE name = 'Single' LIMIT 1)
+);
+
+INSERT INTO attendees (
+    lesson_id,
+    member_id,
+    token_id
+) VALUES (
+    (SELECT id FROM lessons WHERE id = 1 LIMIT 1),
+    (SELECT id FROM members WHERE first_name = 'Jazer' LIMIT 1),
+    (SELECT id FROM tokens WHERE member_id = 1 LIMIT 1)
+);

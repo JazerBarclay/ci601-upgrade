@@ -46,6 +46,9 @@ app.use("/lessonPurchases", lessonPurchasesRouter);
 const attendanceRouter = require("./routes/attendance/attendanceRouter");
 app.use("/attendance", attendanceRouter);
 
+const tokenRouter = require("./routes/tokens/tokenRouter");
+app.use("/tokens", tokenRouter);
+
 app.get("/", (req, res) => {
     res.status(200).json({
         message: "Ok",

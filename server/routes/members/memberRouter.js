@@ -1,15 +1,39 @@
 // Import modules from controller
-const { getMembers, getMembersById, addMember, editMember } = require('./memberController');
+const {
+    returnAllMembers,
+    returnMemberById,
+    addMember,
+    editMember,
+    returnMemberId,
+    returnTotalMembers,
+    returnTotalSignupsToday,
+    returnTotalSignupsWeek,
+    returnTotalSignupsMonth,
+    returnTotalSignupsYear,
+} = require("./memberController");
+const { generateFreeToken } = require("../tokens/tokenController");
 
-const router = require('express').Router()
+const router = require("express").Router();
 
-router.get('/', getMembers);
+router.get("/", returnAllMembers);
 
-router.get('/:id', getMembersById);
+router.get("/:id", returnMemberById);
 
-router.post('/', addMember);
 
-router.patch('/:id', editMember);
+router.get("/total/all", returnTotalMembers);
+
+router.get("/total/today", returnTotalSignupsToday);
+
+router.get("/total/week", returnTotalSignupsWeek);
+
+router.get("/total/month", returnTotalSignupsMonth);
+
+router.get("/total/year", returnTotalSignupsYear);
+
+
+router.post("/", addMember, generateFreeToken, returnMemberId);
+
+router.patch("/:id", editMember, returnMemberId);
 
 // Export this router module
 module.exports = router;

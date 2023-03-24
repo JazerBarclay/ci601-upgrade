@@ -28,14 +28,14 @@ const UmaSelect = ({
             <select
                 className="umaSelect"
                 defaultValue={
-                    required && (defaultId === null || defaultId === 0)
-                        ? 0
+                    (defaultId === null || defaultId === 0)
+                        ? (required ? values.entries().next().value[0] : "Select")
                         : values.get(defaultId)[valueKey]
                 }
                 onChange={onUpdate}
                 required={required}
             >
-                {required || <option value={""} data-id={null} key={0} />}
+                {required || <option value={"Select"} data-id={0} key={0}>--- Select ---</option>}
                 {Array.from(values.entries()).map((entry) => {
                     const [key, obj] = entry;
                     return <option

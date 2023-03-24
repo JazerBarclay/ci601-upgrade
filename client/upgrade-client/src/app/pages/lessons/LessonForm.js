@@ -1,7 +1,7 @@
 import { useState } from "react";
-import config from "../../config";
-import UmaDate from "../elements/date/UmaDate";
-import UmaSelect from "../elements/select/UmaSelect";
+import config from "../../../config";
+import UmaDate from "../../../components/elements/date/UmaDate";
+import UmaSelect from "../../../components/elements/select/UmaSelect";
 
 import "./LessonForm.css";
 
@@ -12,12 +12,11 @@ const LessonForm = ({
     recordId,
     lessonTypes
 }) => {
+
+    // console.log(defaultValues)
     const [activeId, setActiveId] = useState(recordId);
-    
-    const [defaultType, setDefaultType] = useState(defaultValues.type || 1);
-    
-    const [lessonType, setLessonType] = useState(defaultValues.type || 1);
-    
+    const [defaultType, setDefaultType] = useState(defaultValues.type_id || 1);
+    const [lessonType, setLessonType] = useState(defaultValues.type_id || 1);
     const [lessonDate, setLessonDate] = useState(
         defaultValues.lesson_date ? defaultValues.lesson_date.substr(0,10) : new Date().toJSON().slice(0, 10)
     );
@@ -34,10 +33,10 @@ const LessonForm = ({
         evt.preventDefault();
 
         const payload = {
-            lessonType: lessonType,
-            lessonDate: lessonDate,
-            startTime: lessonStartTime,
-            endTime: lessonEndTime,
+            lesson_type: lessonType,
+            date: lessonDate,
+            start_time: lessonStartTime,
+            end_time: lessonEndTime,
         };
 
         console.log(payload)
@@ -83,10 +82,11 @@ const LessonForm = ({
             {activeId == null ? <h3>New Lesson</h3> : <h3>Update Lesson</h3>}
 
             <label>Lesson Type</label>
+            
             <UmaSelect
                 defaultId={defaultType}
                 idKey={"id"}
-                valueKey={"type_name"}
+                valueKey={"name"}
                 values={lessonTypes}
                 updateKey={(id) => {
                     setLessonType(id);

@@ -1,38 +1,152 @@
 // Import database connection
 const db = require("../../database/dbConnection");
 
-// Database CREATE, READ, UPDATE, DELETE (CRUD) operations
+// Database CRUD operations
 module.exports = {
     // Select all members
     selectAllMembers: (callBack) => {
-        db.query(`SELECT * FROM members;`, [], (error, results, fields) => {
+        db.query(`SELECT * FROM members_view;`, [], (error, results) => {
             if (error) return callBack(error);
             return callBack(null, results);
         });
     },
 
-    selectMemberById: (memberId, callBack) => {
+    selectMemberById: (id, callBack) => {
         db.query(
             `
-            SELECT * FROM members WHERE id = $1;
+            SELECT * FROM members_view WHERE id = $1;
             `,
-            [memberId],
-            (error, results, fields) => {
+            [id],
+            (error, results) => {
                 if (error) return callBack(error);
                 return callBack(null, results);
             }
         );
     },
 
-    selectMemberByName: (memberName, callBack) => {
+    selectMemberByName: (member_name, callBack) => {
         db.query(
             `
-            SELECT * FROM members
+            SELECT * FROM members_view
             WHERE first_name LIKE $1
             OR last_name LIKE $1
             `,
-            ["%" + memberName + "%"],
-            (error, results, fields) => {
+            ["%" + member_name + "%"],
+            (error, results) => {
+                if (error) return callBack(error);
+                return callBack(null, results);
+            }
+        );
+    },
+
+    selectTotalMembers: (callBack) => {
+        db.query(
+            `
+            SELECT COUNT(*) as members FROM members;
+            `,
+            [],
+            (error, results) => {
+                if (error) return callBack(error);
+                return callBack(null, results);
+            }
+        );
+    },
+
+    selectTotalSignupsToday: (callBack) => {
+        db.query(
+            `
+            SELECT COUNT(*) as signups 
+            FROM members 
+            WHERE signup_date = current_date + INTERVAL '1 day';
+            `,
+            [],
+            (error, results) => {
+                if (error) return callBack(error);
+                return callBack(null, results);
+            }
+        );
+    },
+
+    selectTotalSignupsWeek: (callBack) => {
+        // Today's offset from Monday
+        let dayOfWeek = new Date().getDay();
+
+        // Fix for Sunday which is 0
+        dayOfWeek = (dayOfWeek === 0 ? 7 : dayOfWeek);
+
+        // Offset => Mon 1, Tue, 2 ... Sun 7
+
+        // Set start of week date
+        const startOfWeekDate = new Date(
+            new Date().setDate(new Date().getDate() - dayOfWeek + 1))
+                .toISOString()
+                .split("T")[0];
+
+        db.query(
+            `
+            SELECT COUNT(*) as signups 
+            FROM members 
+            WHERE signup_date >= $1 
+            AND signup_date <= current_date + INTERVAL '1 day';
+            `,
+            [startOfWeekDate],
+            (error, results) => {
+                if (error) return callBack(error);
+                return callBack(null, results);
+            }
+        );
+    },
+
+    selectTotalSignupsMonth: (callBack) => {
+
+        // Get todays date
+        const today = new Date()
+            .toISOString()
+            .split("T")[0];
+
+        // Split year, month and day
+        const arr = today.split('-');
+
+        // Reconstruct with 1st of month
+        const beginningOfMonth = `${arr[0]}-${arr[1]}-01`;
+
+        db.query(
+            `
+            SELECT COUNT(*) as signups 
+            FROM members 
+            WHERE signup_date >= $1 
+            AND signup_date <= current_date + INTERVAL '1 day';
+            `,
+            [beginningOfMonth],
+            (error, results) => {
+                if (error) return callBack(error);
+                return callBack(null, results);
+            }
+        );
+    },
+
+    selectTotalSignupsYear: (callBack) => {
+
+        // Get todays date
+        const today = new Date()
+            .toISOString()
+            .split("T")[0];
+
+        // Split year, month and day
+        const arr = today.split('-');
+
+        // Reconstruct with 1st of year
+        const beginningOfYear = `${arr[0]}-01-01`;
+
+        db.query(
+            `
+            SELECT COUNT(*) as signups 
+            FROM members 
+            WHERE signup_date >= $1 
+            AND signup_date <= current_date + INTERVAL '1 day';
+            `,
+            [beginningOfYear],
+            (error, results) => {
                 if (error) return callBack(error);
                 return callBack(null, results);
             }
@@ -40,18 +154,18 @@ module.exports = {
     },
 
     insertMember: (
-        firstName,
-        lastName,
-        contactNumber,
-        emailAddress,
+        first_name,
+        last_name,
+        contact_number,
+        email_address,
         grade,
         licensed,
         outstanding,
-        contactByEmail,
-        primaryContact,
-        primaryContactNumber,
-        secondaryContact,
-        secondaryContactNumber,
+        contact_by_email,
+        primary_contact,
+        primary_contact_number,
+        secondary_contact,
+        secondary_contact_number,
         notes,
         callback
     ) => {
@@ -72,23 +186,23 @@ module.exports = {
                 notes
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
-            );`,
+            ) RETURNING id;`,
             [
-                firstName,
-                lastName,
-                contactNumber,
-                emailAddress,
+                first_name,
+                last_name,
+                contact_number,
+                email_address,
                 grade,
                 licensed,
                 outstanding,
-                contactByEmail,
-                primaryContact,
-                primaryContactNumber,
-                secondaryContact,
-                secondaryContactNumber,
+                contact_by_email,
+                primary_contact,
+                primary_contact_number,
+                secondary_contact,
+                secondary_contact_number,
                 notes,
             ],
-            (error, results, fields) => {
+            (error, results) => {
                 if (error) return callback(error);
                 return callback(null, results);
             }
@@ -96,18 +210,18 @@ module.exports = {
     },
 
     updateMember: (
-        firstName,
-        lastName,
-        contactNumber,
-        emailAddress,
+        first_name,
+        last_name,
+        contact_number,
+        email_address,
         grade,
         licensed,
         outstanding,
-        contactByEmail,
-        primaryContact,
-        primaryContactNumber,
-        secondaryContact,
-        secondaryContactNumber,
+        contact_by_email,
+        primary_contact,
+        primary_contact_number,
+        secondary_contact,
+        secondary_contact_number,
         notes,
         id,
         callback
@@ -131,22 +245,22 @@ module.exports = {
             WHERE id = $14;
             `,
             [
-                firstName,
-                lastName,
-                contactNumber,
-                emailAddress,
+                first_name,
+                last_name,
+                contact_number,
+                email_address,
                 grade,
                 licensed,
                 outstanding,
-                contactByEmail,
-                primaryContact,
-                primaryContactNumber,
-                secondaryContact,
-                secondaryContactNumber,
+                contact_by_email,
+                primary_contact,
+                primary_contact_number,
+                secondary_contact,
+                secondary_contact_number,
                 notes,
-                id
+                id,
             ],
-            (error, results, fields) => {
+            (error, results) => {
                 if (error) return callback(error);
                 return callback(null, results);
             }
