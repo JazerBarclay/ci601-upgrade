@@ -1,0 +1,1239 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{adams_basic_2018}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=AD}{%
+         family={Adams},
+         familyi={A\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{AD1}
+    \strng{fullhash}{AD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{abstract}{%
+    Learn how to create a basic login system with Node.js, Express, and MySQL.
+  Authenticate users on your website to access restricted pages.%
+    }
+    \field{title}{Basic {Login} {System} with {Node}.js, {Express}, and
+  {MySQL}}
+    \verb{url}
+    \verb https://codeshack.io/basic-login-system-nodejs-express-mysql/
+    \endverb
+    \field{journaltitle}{CodeShack}
+    \field{month}{09}
+    \field{year}{2018}
+    \field{urlday}{30}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{arctype_performance_2021}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Arctype},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{abstract}{%
+    What workload analysis and running queries can teach us about the
+  performance differences in JSON, indexing, and concurrency.%
+    }
+    \field{title}{Performance differences between {Postgres} and {MySQL}}
+    \verb{url}
+    \verb https://arctype.com/blog/performance-difference-between-postgresql-an
+    \verb d-mysql/
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/QDPKI8QK/performance-difference-
+    \verb between-postgresql-and-mysql.html:text/html
+    \endverb
+    \field{journaltitle}{Arctype Blog}
+    \field{month}{03}
+    \field{year}{2021}
+    \field{urlday}{27}
+    \field{urlmonth}{10}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{biorn-hansen_progressive_2017}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=BHA}{%
+         family={Biørn-Hansen},
+         familyi={B\bibinithyphendelim H\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MTA}{%
+         family={Majchrzak},
+         familyi={M\bibinitperiod},
+         given={Tim\bibnamedelima A.},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GTM}{%
+         family={Grønli},
+         familyi={G\bibinitperiod},
+         given={Tor-Morten},
+         giveni={T\bibinithyphendelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BHAMTAGTM1}
+    \strng{fullhash}{BHAMTAGTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.5220/0006353703440351
+    \endverb
+    \field{pages}{344\bibrangedash 351}
+    \field{shorttitle}{Progressive {Web} {Apps}}
+    \field{title}{Progressive {Web} {Apps}: {The} {Possible} {Web}-native
+  {Unifier} for {Mobile} {Development}}
+    \verb{file}
+    \verb Full Text PDF:/Users/jazer/Zotero/storage/J2YXMVRA/Biørn-Hansen et a
+    \verb l. - 2017 - Progressive Web Apps The Possible Web-native Unif.pdf:app
+    \verb lication/pdf
+    \endverb
+    \field{month}{01}
+    \field{year}{2017}
+  \endentry
+
+  \entry{chacon_pro_2014}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CS}{%
+         family={Chacon},
+         familyi={C\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Apress}%
+    }
+    \keyw{Distributed processing, Electronic data processing, Git (Computer
+  file)}
+    \strng{namehash}{CS1}
+    \strng{fullhash}{CS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{Second edition}
+    \field{isbn}{978-1-4842-0077-3}
+    \field{series}{The expert's voice in software development}
+    \field{title}{Pro {Git}}
+    \list{location}{1}{%
+      {New York, NY}%
+    }
+    \field{annotation}{%
+    "Everything you need to know about the Git distibuted source control
+  tool"--Cover%
+    }
+    \field{year}{2014}
+  \endentry
+
+  \entry{cox_business_2021}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CK}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {CRC Press}%
+    }
+    \keyw{Computers / Software Development \& Engineering / General, Computers
+  / Software Development \& Engineering / Project Management, Computers /
+  Software Development \& Engineering / Systems Analysis \& Design}
+    \strng{namehash}{CK1}
+    \strng{fullhash}{CK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    IT projects emerge from a business need. In practice, software developers
+  must accomplish two big things before an IT project can begin: find out what
+  you need to do (i.e., analyse business requirements) and plan out how to do
+  it (i.e., project management). The biggest problem in IT projects is
+  delivering the wrong product because IT people do not understand what
+  business people require. This practical textbook teaches computer science
+  students how to manage and deliver IT projects by linking business and IT
+  requirements with project management in an incremental and straightforward
+  approach. Business Analysis, Requirements, and Project Management: A Guide
+  for Computing Students presents an approach to analysis management that
+  scales the business perspective. It takes a business process view of a
+  business proposal as a model and explains how to structure a technical
+  problem into a recognisable pattern with problem frames. It shows how to
+  identify core transactions and model them as use cases to create a
+  requirements table useful to designers and coders. Linked to the analysis are
+  three management tools: the product breakdown structure (PBS), the Gantt
+  chart, and the Kanban board. The PBS is derived in part from the problem
+  frame. The Gantt chart emerges from the PBS and ensures the key requirements
+  are addressed by reference to use cases. The Kanban board is especially
+  useful in Task Driven Development, which the text covers. This textbook
+  consists of two interleaving parts and features a single case study. Part one
+  addresses the business and requirements perspective. The second integrates
+  core project management approaches and explains how both requirements and
+  management are connected. The remainder of the book is appendices, the first
+  of which provides solutions to the exercises presented in each chapter. The
+  second appendix puts together much of the documentation for the case study
+  into one place. The case study presents a real-word business scenario to
+  expose students to professional practice.%
+    }
+    \field{isbn}{978-1-00-047049-9}
+    \field{shorttitle}{Business {Analysis}, {Requirements}, and {Project}
+  {Management}}
+    \field{title}{Business {Analysis}, {Requirements}, and {Project}
+  {Management}: {A} {Guide} for {Computing} {Students}}
+    \field{month}{10}
+    \field{year}{2021}
+  \endentry
+
+  \entry{date_database_2019}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DCJ}{%
+         family={Date},
+         familyi={D\bibinitperiod},
+         given={Chris\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Apress}%
+    }
+    \strng{namehash}{DCJ1}
+    \strng{fullhash}{DCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{edition}{Second edition}
+    \field{isbn}{978-1-4842-5539-1}
+    \field{series}{For professionals by professionals}
+    \field{shorttitle}{Database design and relational theory}
+    \field{title}{Database design and relational theory: normal forms and all
+  that jazz}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{year}{2019}
+  \endentry
+
+  \entry{fernandez_secure_2008}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=FEB}{%
+         family={Fernandez},
+         familyi={F\bibinitperiod},
+         given={Eduardo\bibnamedelima B.},
+         giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fonoage},
+         familyi={F\bibinitperiod},
+         given={Mihai},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={VanHilst},
+         familyi={V\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Marta},
+         familyi={M\bibinitperiod},
+         given={Mirela},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Authorization, Business, Computer architecture, Conferences,
+  distributed systems, Middleware, patterns, security, Security, Software}
+    \strng{namehash}{FEB+1}
+    \strng{fullhash}{FEBFMVMMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    The three-tier architecture pattern and its variants have been around for a
+  while and there are several discussions of their properties as well as
+  several patterns. None of these discussions considers security. However,
+  several real systems implement this approach including security. We revisit
+  this pattern to explicitly separate and analyze its security aspects.%
+    }
+    \field{booktitle}{2008 {International} {Conference} on {Complex},
+  {Intelligent} and {Software} {Intensive} {Systems}}
+    \verb{doi}
+    \verb 10.1109/CISIS.2008.51
+    \endverb
+    \field{pages}{555\bibrangedash 560}
+    \field{title}{The {Secure} {Three}-{Tier} {Architecture} {Pattern}}
+    \verb{file}
+    \verb IEEE Xplore Abstract Record:/Users/jazer/Zotero/storage/FFKE5UEV/4606
+    \verb 734.html:text/html;IEEE Xplore Full Text PDF:/Users/jazer/Zotero/stor
+    \verb age/2BBIMVQ5/Fernandez et al. - 2008 - The Secure Three-Tier Architec
+    \verb ture Pattern.pdf:application/pdf
+    \endverb
+    \field{month}{03}
+    \field{year}{2008}
+  \endentry
+
+  \entry{gauravaram_security_2012}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=GP}{%
+         family={Gauravaram},
+         familyi={G\bibinitperiod},
+         given={Praveen},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{Compression functions, Computer systems security, Cryptography, Hash
+  functions, Password, Salt}
+    \strng{namehash}{GP1}
+    \strng{fullhash}{GP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    Protection of passwords used to authenticate computer systems and networks
+  is one of the most important application of cryptographic hash functions. Due
+  to the application of precomputed memory look up attacks such as birthday and
+  dictionary attacks on the hash values of passwords to find passwords, it is
+  usually recommended to apply hash function to the combination of both the
+  salt and password, denoted salt{\textbar}{\textbar}password, to prevent these
+  attacks. In this paper, we present the first security analysis of
+  salt{\textbar}{\textbar}password hashing application. We show that when hash
+  functions based on the compression functions with easily found fixed points
+  are used to compute the salt{\textbar}{\textbar}password hashes, these hashes
+  are susceptible to precomputed offline birthday attacks. For example, this
+  attack is applicable to the salt{\textbar}{\textbar}password hashes computed
+  using the standard hash functions such as MD5, SHA-1, SHA-256 and SHA-512
+  that are based on the popular Davies-Meyer compression function. This attack
+  exposes a subtle property of this application that although the provision of
+  salt prevents an attacker from finding passwords, salts prefixed to the
+  passwords do not prevent an attacker from doing a precomputed birthday attack
+  to forge an unknown password. In this forgery attack, we demonstrate the
+  possibility of building multiple passwords for an unknown password for the
+  same hash value and salt. Interestingly, password{\textbar}{\textbar}salt
+  (i.e. salts suffixed to the passwords) hashes computed using Davies-Meyer
+  hash functions are not susceptible to this attack, showing the first security
+  gap between the prefix-salt and suffix-salt methods of hashing passwords.%
+    }
+    \field{booktitle}{2012 {International} {Conference} on {Advanced}
+  {Computer} {Science} {Applications} and {Technologies} ({ACSAT})}
+    \verb{doi}
+    \verb 10.1109/ACSAT.2012.49
+    \endverb
+    \field{pages}{25\bibrangedash 30}
+    \field{title}{Security {Analysis} of salt{\textbar}{\textbar}password
+  {Hashes}}
+    \verb{file}
+    \verb IEEE Xplore Abstract Record:/Users/jazer/Zotero/storage/5FVMIHID/6516
+    \verb 321.html:text/html;IEEE Xplore Full Text PDF:/Users/jazer/Zotero/stor
+    \verb age/K8K75XCE/Gauravaram - 2012 - Security Analysis of saltpassword Ha
+    \verb shes.pdf:application/pdf
+    \endverb
+    \field{month}{11}
+    \field{year}{2012}
+  \endentry
+
+  \entry{noauthor_hubspot_2022}{misc}{}
+    \list{language}{1}{%
+      {en-US, en}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2022}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    HubSpot's CRM platform contains the marketing, sales, service, operations,
+  and website-building software you need to grow your business.%
+    }
+    \field{title}{{HubSpot}}
+    \verb{url}
+    \verb https://www.hubspot.com
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/27PTC5V6/www.hubspot.com.html:te
+    \verb xt/html
+    \endverb
+    \field{journaltitle}{HubSpot}
+    \field{month}{11}
+    \field{year}{2022}
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{noauthor_invoice_nodate}{misc}{}
+    \list{language}{1}{%
+      {en}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labeldatesource}{nodate}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{abstract}{%
+    Simple, Intuitive Invoicing.%
+    }
+    \field{title}{Invoice {Ninja}}
+    \verb{url}
+    \verb https://app.invoiceninja.com
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/9MMYDGQB/dashboard.html:text/htm
+    \verb l
+    \endverb
+    \field{journaltitle}{Invoice Ninja}
+    \field{urlday}{30}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{ionescu_alternatives_2019}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=IVM}{%
+         family={Ionescu},
+         familyi={I\bibinitperiod},
+         given={Valeriu\bibnamedelima Manuel},
+         giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Manan},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hindocha},
+         familyi={H\bibinitperiod},
+         given={Drashti},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \keyw{Cygwin, Docker, performance, VirtualBox, Windows Linux Subsystem}
+    \strng{namehash}{IVMPMHD1}
+    \strng{fullhash}{IVMPMHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{abstract}{%
+    The Linux operating system is often used alongside Windows in computer labs
+  in universities for research, laboratories and general purpose use. It is
+  therefore important to investigate the characteristics of some of the
+  possibilities available for students to run Windows and Linux applications,
+  if possible at the same time, on the same computer. This paper compares the
+  use of Windows Subsystem Linux, Docker, Cygwin and Oracle VM VirtualBox as
+  solutions for running Linux guest applications in a Windows 10 host
+  environment. The tests use simple C code that targets process creation,
+  application performance and inter-process communication performance. The
+  conclusions show the advantages and disadvantages of using each solution for
+  running Linux applications in a Windows host.%
+    }
+    \field{booktitle}{2019 11th {International} {Conference} on {Electronics},
+  {Computers} and {Artificial} {Intelligence} ({ECAI})}
+    \verb{doi}
+    \verb 10.1109/ECAI46879.2019.9042127
+    \endverb
+    \field{pages}{1\bibrangedash 4}
+    \field{title}{Alternatives for {Running} {Linux} {Applications} in
+  {Windows}}
+    \verb{file}
+    \verb IEEE Xplore Full Text PDF:/Users/jazer/Zotero/storage/Y6X6SHLT/Ionesc
+    \verb u et al. - 2019 - Alternatives for Running Linux Applications in Win.
+    \verb pdf:application/pdf
+    \endverb
+    \field{month}{06}
+    \field{year}{2019}
+  \endentry
+
+  \entry{lucid_why_2019}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=LCT}{%
+         family={Lucid},
+         familyi={L\bibinitperiod},
+         given={Content\bibnamedelima Team},
+         giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{LCT1}
+    \strng{fullhash}{LCT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    While scrum may be the most popular scrum methodology, it's worth
+  considering feature-driven development, especially for long-term projects
+  with large teams. Read about the steps of the FDD project life cycle, plus
+  advantages and disadvantages of this met%
+    }
+    \field{title}{Why (and {How}) {You} {Should} {Use} {Feature}-{Driven}
+  {Development}}
+    \verb{url}
+    \verb https://www.lucidchart.com/blog/why-use-feature-driven-development
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/RKDQH2JZ/why-use-feature-driven-
+    \verb development.html:text/html
+    \endverb
+    \field{month}{12}
+    \field{year}{2019}
+    \field{urlday}{28}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{macharia_session_2021}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=MC}{%
+         family={Macharia},
+         familyi={M\bibinitperiod},
+         given={Catherine},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en-us}%
+    }
+    \strng{namehash}{MC1}
+    \strng{fullhash}{MC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    This tutorial will help the reader develop a session based authentication
+  system and go over how to manage sessions using Express.js and Express
+  Session in Node.js.%
+    }
+    \field{title}{Session {Management} in {Node}.js using {ExpressJS} and
+  {Express} {Session}}
+    \verb{url}
+    \verb https://www.section.io/engineering-education/session-management-in-no
+    \verb dejs-using-expressjs-and-express-session/
+    \endverb
+    \field{journaltitle}{Engineering Education (EngEd) Program {\textbar}
+  Section}
+    \field{month}{06}
+    \field{year}{2021}
+    \field{urlday}{30}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{martin_clean_2008}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MRC}{%
+         family={Martin},
+         familyi={M\bibinitperiod},
+         given={Robert\bibnamedelima C},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Prentice Hall}%
+    }
+    \strng{namehash}{MRC1}
+    \strng{fullhash}{MRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Clean code: {A} handbook of agile software craftsmanship}
+    \list{location}{1}{%
+      {Philadelphia, PA}%
+    }
+    \field{year}{2008}
+  \endentry
+
+  \entry{merkel_docker_2014}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={Merkel},
+         familyi={M\bibinitperiod},
+         given={Dirk},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    Docker promises the ability to package applications and their dependencies
+  into lightweight containers that move easily between different distros, start
+  up quickly and are isolated from each other.%
+    }
+    \field{shorttitle}{Docker}
+    \field{title}{Docker: lightweight {Linux} containers for consistent
+  development and deployment}
+    \verb{url}
+    \verb https://www.semanticscholar.org/paper/Docker%3A-lightweight-Linux-con
+    \verb tainers-for-consistent-Merkel/875d90d4f66b07f90687b27ab304e04a3f666fc
+    \verb 2
+    \endverb
+    \verb{file}
+    \verb Full Text PDF:/Users/jazer/Zotero/storage/LKYBD9TF/Merkel - 2014 - Do
+    \verb cker lightweight Linux containers for consisten.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Linux Journal}
+    \field{annotation}{%
+    [TLDR] Docker promises the ability to package applications and their
+  dependencies into lightweight containers that move easily between different
+  distros, start up quickly and are isolated from each other.%
+    }
+    \field{month}{03}
+    \field{year}{2014}
+    \field{urlday}{02}
+    \field{urlmonth}{05}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{mpcs_waterfall_2012}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=MMM}{%
+         family={Mpcs},
+         familyi={M\bibinitperiod},
+         given={Mike\bibnamedelima McCormick},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MMM1}
+    \strng{fullhash}{MMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    Semantic Scholar extracted view of "Waterfall vs. Agile Methodology" by
+  Mike McCormick Mpcs%
+    }
+    \field{title}{Waterfall vs. {Agile} {Methodology}}
+    \verb{url}
+    \verb https://www.semanticscholar.org/paper/Waterfall-vs.-Agile-Methodology
+    \verb -Mpcs/73c9d2d3f5fc165db508b6eab936b85afc311961
+    \endverb
+    \verb{file}
+    \verb Full Text PDF:/Users/jazer/Zotero/storage/X4KSACNN/Mpcs - 2012 - Wate
+    \verb rfall vs. Agile Methodology.pdf:application/pdf
+    \endverb
+    \field{year}{2012}
+    \field{urlday}{02}
+    \field{urlmonth}{05}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{page_how_2023}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=PD}{%
+         family={Page},
+         familyi={P\bibinitperiod},
+         given={Dave},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{PD1}
+    \strng{fullhash}{PD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2023}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    Learn how to secure your PostgreSQL database. Guide for PostgreSQL security
+  hardening best practices. Get tips about securing PostgreSQL encryption,
+  authentication, access, roles, and many more.%
+    }
+    \field{shorttitle}{How to {Secure} {PostgreSQL}}
+    \field{title}{How to {Secure} {PostgreSQL}: {Security} {Hardening} {Best}
+  {Practices} \& {Tips}}
+    \verb{url}
+    \verb https://www.enterprisedb.com/blog/how-to-secure-postgresql-security-h
+    \verb ardening-best-practices-checklist-tips-encryption-authentication-vuln
+    \verb erabilities
+    \endverb
+    \verb{file}
+    \verb Security-best-practices-2020.pdf:/Users/jazer/Zotero/storage/3MGLMXBY
+    \verb /Security-best-practices-2020.pdf:application/pdf;Snapshot:/Users/jaz
+    \verb er/Zotero/storage/PT9EMC33/how-to-secure-postgresql-security-hardenin
+    \verb g-best-practices-checklist-tips-encryption-authentica.html:text/html
+    \endverb
+    \field{journaltitle}{EDB}
+    \field{month}{03}
+    \field{year}{2023}
+    \field{urlday}{02}
+    \field{urlmonth}{05}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{participation_companies_nodate}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=PE}{%
+         family={Participation},
+         familyi={P\bibinitperiod},
+         given={Expert},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \strng{namehash}{PE1}
+    \strng{fullhash}{PE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labeldatesource}{nodate}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    An Act to reform company law and restate the greater part of the enactments
+  relating to companies; to make other provision relating to companies and
+  other forms of business organisation; to make provision about directors'
+  disqualification, business names, auditors and actuaries; to amend Part 9 of
+  the Enterprise Act 2002; and for connected purposes.%
+    }
+    \field{note}{Publisher: Statute Law Database}
+    \field{title}{Companies {Act} 2006}
+    \verb{url}
+    \verb https://www.legislation.gov.uk/ukpga/2006/46/part/15/chapter/2
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/XXZD23ZZ/2.html:text/html
+    \endverb
+    \field{type}{Text}
+    \field{urlday}{30}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{pilato_version_2008}{book}{}
+    \name{author}{3}{}{%
+      {{hash=PCM}{%
+         family={Pilato},
+         familyi={P\bibinitperiod},
+         given={C.\bibnamedelima Michael},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CSB}{%
+         family={Collins-Sussman},
+         familyi={C\bibinithyphendelim S\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=FBW}{%
+         family={Fitzpatrick},
+         familyi={F\bibinitperiod},
+         given={Brian\bibnamedelima W.},
+         giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly}%
+    }
+    \strng{namehash}{PCMCSBFBW1}
+    \strng{fullhash}{PCMCSBFBW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{edition}{2. ed}
+    \field{isbn}{978-0-596-51033-6}
+    \field{shorttitle}{Version control with subversion}
+    \field{title}{Version control with subversion: the standard in open source
+  version control}
+    \list{location}{1}{%
+      {Beijing Cambridge Farnham Köln}%
+    }
+    \field{annotation}{%
+    1. Aufl. verf. von: Ben Collins-Sussman; Brian W. Fitzpatrick; C. Michael
+  Pilato%
+    }
+    \field{year}{2008}
+  \endentry
+
+  \entry{robbins_unix_2006}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RA}{%
+         family={Robbins},
+         familyi={R\bibinitperiod},
+         given={Arnold},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly}%
+    }
+    \keyw{Operating systems (Computers), UNIX (Computer file)}
+    \strng{namehash}{RA1}
+    \strng{fullhash}{RA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{edition}{4th ed}
+    \field{isbn}{978-0-596-10029-2}
+    \field{note}{OCLC: ocm62876146}
+    \field{title}{{UNIX} in a nutshell}
+    \list{location}{1}{%
+      {Beijing ; Cambrige, Mass}%
+    }
+    \field{annotation}{%
+    Introduction -- Unix commands -- The Unix shell: an overview -- The Bash
+  and Korn shells -- tcsh: an extended C shell -- Package management -- Pattern
+  matching -- The Emacs editor -- The vi, ex, and vim editors -- The sed editor
+  -- The awk programming language -- Source code management: an overview -- The
+  revision control system -- The concurrent versions system -- The subversion
+  version control system -- The GNU make utility -- The GDB debugger -- Writing
+  manual pages%
+    }
+    \field{year}{2006}
+  \endentry
+
+  \entry{shore_art_2022}{book}{}
+    \name{author}{4}{}{%
+      {{hash=SJ}{%
+         family={Shore},
+         familyi={S\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Larsen},
+         familyi={L\bibinitperiod},
+         given={Diana},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Klitgaard},
+         familyi={K\bibinitperiod},
+         given={Gitte},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Warden},
+         familyi={W\bibinitperiod},
+         given={Shane},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly Media, Inc}%
+    }
+    \keyw{Agile software development, Computer software, Development, Méthodes
+  agiles (Développement de logiciels)}
+    \strng{namehash}{SJ+1}
+    \strng{fullhash}{SJLDKGWS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2022}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    "Most companies developing software employ something they call "Agile." But
+  there's widespread misunderstanding of what Agile is and how to use it. If
+  you want to improve your software development team's agility, this
+  comprehensive guidebook's clear, concrete, and detailed guidance explains
+  what to do and why, and when to make trade-offs. In this thorough update of
+  the classic Agile how-to guide, James Shore provides no-nonsense advice on
+  Agile adoption, planning, development, delivery, and management taken from
+  over two decades of Agile experience. He brings the latest ideas from Extreme
+  Programming, Scrum, Lean, DevOps, and more into a cohesive whole. Learn how
+  to successfully bring Agile development to your team and organization--or
+  discover why Agile might not be for you."--Amazon.com%
+    }
+    \field{edition}{Second edition}
+    \field{isbn}{978-1-4920-8069-5}
+    \field{note}{OCLC: on1272885748}
+    \field{series}{Theory in practice}
+    \field{title}{The art of agile development}
+    \list{location}{1}{%
+      {Sebastopol, CA}%
+    }
+    \field{annotation}{%
+    Previous edition: 2007%
+    }
+    \field{year}{2022}
+  \endentry
+
+  \entry{sremath_tirumala_hybrid_2016}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=STS}{%
+         family={Sremath\bibnamedelima Tirumala},
+         familyi={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Sreenivas},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Ali},
+         familyi={A\bibinitperiod},
+         given={Shahid},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BGA}{%
+         family={Babu\bibnamedelima G},
+         familyi={B\bibinitperiod\bibinitdelim G\bibinitperiod},
+         given={Anjan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STSASBGA1}
+    \strng{fullhash}{STSASBGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    Migration is considered as crucial task especially in case of distributed
+  projects. Banking domain, which involves sensitive business operations, is
+  one such example which involves large volumes of data and transactions.
+  Banking process is as old as history of human transactions, technological
+  migration is necessary to cope up with the latest advancements to provide
+  better service to the customers. For such a task, a single project management
+  method deployment may not be strategically efficient, especially in terms of
+  maintaining schedule and quality. For instance SCRUM and Feature Driven
+  Development (FDD) are two well-known and popular project management methods
+  with their own advantages and shortcomings. SCRUM, being tight with
+  schedules, often quality may be compromised whereas FDD being quality rich,
+  could overrun project time-line. In this paper for the first time, SCR-FDD, a
+  purposeful amalgamation of SCRUM and FDD methodologies is proposed. The
+  proposed SCR-FDD is evaluated against SCRUM and FDD within a real time
+  project and the results show that proposed SCR-FDD is ten percent more
+  efficient in terms of quality and customer satisfaction compared to its
+  nearest counterpart, SCRUM.%
+    }
+    \verb{doi}
+    \verb 10.5120/ijca2016912443
+    \endverb
+    \field{pages}{1\bibrangedash 5}
+    \field{title}{A {Hybrid} {Agile} model using {SCRUM} and {Feature} {Driven}
+  {Development}}
+    \field{volume}{156}
+    \verb{file}
+    \verb Full Text PDF:/Users/jazer/Zotero/storage/55AF93MH/Sremath Tirumala e
+    \verb t al. - 2016 - A Hybrid Agile model using SCRUM and Feature Drive.pdf
+    \verb :application/pdf
+    \endverb
+    \field{month}{12}
+    \field{year}{2016}
+  \endentry
+
+  \entry{tandel_impact_2018}{report}{}
+    \name{author}{2}{}{%
+      {{hash=TS}{%
+         family={Tandel},
+         familyi={T\bibinitperiod},
+         given={Sayali},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Jamadar},
+         familyi={J\bibinitperiod},
+         given={Abhishek},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TSJA1}
+    \strng{fullhash}{TSJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Innovation in technology always makes an impact on how products and
+  services are designed. The invention of Smartphone especially and after the
+  launch of Android OS which is free there is a huge increase in the use of
+  smartphones. Most of the users use native mobile applications for browsing
+  the contents of the particular industry. The other way is to browse the
+  contents is through a web browser. But both the ways have limitations. The
+  first way which is the native app, user is required to download the app
+  firstly and then they must use it as per their requirements. This has two
+  major disadvantages, one is it takes space on local storage of smartphone
+  device and the network connection must be strong enough to operate it
+  smoothly. The areas where 2G or lesser bandwidth or 3G network is available,
+  it becomes a slow process to access this native app. The second way which is
+  through the web browser has disadvantages since the user experience is not as
+  great as native app. In order to overcome the above limitations, Google has
+  provided a solution of Progressive Web App (PWA) which combines the best of
+  web and mobile apps giving us a rich experience just like the native apps. It
+  is a website built using web technologies that acts like an app. PWA is a
+  website built using web technologies that acts like an app and is not
+  required to be installed like a native app.%
+    }
+    \verb{doi}
+    \verb 10.15680/IJIRSET.2018.0709021
+    \endverb
+    \field{title}{Impact of {Progressive} {Web} {Apps} on {Web} {App}
+  {Development}}
+    \verb{file}
+    \verb Full Text PDF:/Users/jazer/Zotero/storage/TEUC45ZZ/Tandel and Jamadar
+    \verb  - 2018 - Impact of Progressive Web Apps on Web App Developm.pdf:appl
+    \verb ication/pdf
+    \endverb
+    \field{type}{techreport}
+    \field{month}{09}
+    \field{year}{2018}
+  \endentry
+
+  \entry{tsitoara_beginning_2020}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TM}{%
+         family={Tsitoara},
+         familyi={T\bibinitperiod},
+         given={Mariot},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Apress}%
+    }
+    \keyw{code reviews, distributed team, Git, GitHub, open source, project
+  management, social coding, software development, software distribution
+  process, teamwork, version control}
+    \strng{namehash}{TM1}
+    \strng{fullhash}{TM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1007/978-1-4842-5313-7
+    \endverb
+    \field{isbn}{978-1-4842-5312-0 978-1-4842-5313-7}
+    \field{shorttitle}{Beginning {Git} and {GitHub}}
+    \field{title}{Beginning {Git} and {GitHub}: {A} {Comprehensive} {Guide} to
+  {Version} {Control}, {Project} {Management}, and {Teamwork} for the {New}
+  {Developer}}
+    \verb{url}
+    \verb http://link.springer.com/10.1007/978-1-4842-5313-7
+    \endverb
+    \list{location}{1}{%
+      {Berkeley, CA}%
+    }
+    \verb{file}
+    \verb Full Text:/Users/jazer/Zotero/storage/SHD46XN8/Tsitoara - 2020 - Begi
+    \verb nning Git and GitHub A Comprehensive Guide to.pdf:application/pdf
+    \endverb
+    \field{year}{2020}
+    \field{urlday}{02}
+    \field{urlmonth}{05}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{yablonski_home_nodate}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=YJ}{%
+         family={Yablonski},
+         familyi={Y\bibinitperiod},
+         given={Jon},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{YJ1}
+    \strng{fullhash}{YJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labeldatesource}{nodate}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    Laws of UX is a collection of best practices that designers can consider
+  when building user interfaces.%
+    }
+    \field{title}{Home}
+    \verb{url}
+    \verb https://lawsofux.com/
+    \endverb
+    \verb{file}
+    \verb Snapshot:/Users/jazer/Zotero/storage/8RYCLKU9/lawsofux.com.html:text/
+    \verb html
+    \endverb
+    \field{journaltitle}{Laws of UX}
+    \field{urlday}{28}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{zolkifli_version_2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZNN}{%
+         family={Zolkifli},
+         familyi={Z\bibinitperiod},
+         given={Nazatul\bibnamedelima Nurlisa},
+         giveni={N\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Ngah},
+         familyi={N\bibinitperiod},
+         given={Amir},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Deraman},
+         familyi={D\bibinitperiod},
+         given={Aziz},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{Centralized Version Control Systems, Collaborative Development,
+  Distributed Version Control Systems, Software Development, Version Control
+  Systems}
+    \strng{namehash}{ZNNNADA1}
+    \strng{fullhash}{ZNNNADA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Version Control Systems (VCS) have been used by many software developers
+  during project developments as it helps them to manage the source codes and
+  enables them to keep every version of the project they have worked on. It is
+  the way towards managing, organizing, and coordinating the development of
+  objects. In Software Engineering, software developers need to collaborate
+  with each other to develop a better project. Thus, VCS is very useful because
+  it also supports a collaborative framework that makes it easy for software
+  developers to work together effectively. Without VCS, collaboration is very
+  challenging. This paper discusses the background and the related works about
+  VCS that have been studied by researchers. The purpose of this paper is to
+  convey the knowledge and ideas that have been established on VCS.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.procs.2018.08.191
+    \endverb
+    \field{issn}{1877-0509}
+    \field{pages}{408\bibrangedash 415}
+    \field{series}{The 3rd {International} {Conference} on {Computer} {Science}
+  and {Computational} {Intelligence} ({ICCSCI} 2018) : {Empowering} {Smart}
+  {Technology} in {Digital} {Era} for a {Better} {Life}}
+    \field{shorttitle}{Version {Control} {System}}
+    \field{title}{Version {Control} {System}: {A} {Review}}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S1877050918314819
+    \endverb
+    \field{volume}{135}
+    \verb{file}
+    \verb ScienceDirect Full Text PDF:/Users/jazer/Zotero/storage/SE2JQAI7/Zolk
+    \verb ifli et al. - 2018 - Version Control System A Review.pdf:application/
+    \verb pdf;ScienceDirect Snapshot:/Users/jazer/Zotero/storage/FUFUHKN2/S1877
+    \verb 050918314819.html:text/html
+    \endverb
+    \field{journaltitle}{Procedia Computer Science}
+    \field{month}{01}
+    \field{year}{2018}
+    \field{urlday}{02}
+    \field{urlmonth}{05}
+    \field{urlyear}{2023}
+  \endentry
+\enddatalist
+\endinput

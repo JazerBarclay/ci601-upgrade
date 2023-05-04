@@ -1,0 +1,75 @@
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\chapter{Introduction} % Main chapter title
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+In this chapter, we introduce the business and the problems they face. Next, we cover the project motivations for solving these issues and the resulting objectives. We then go over what lies outside this project's scope, and finally, we will summarise this document's overall structure covering each chapter in detail.
+
+%----------------------------------------------------------------------------------------
+%	1. Project motivation
+%----------------------------------------------------------------------------------------
+\section{Project motivation}
+Up-grade Martial Arts (UMA) is a small, local gym offering boxing, kickboxing and yoga services. On top of this, they provide space for coaches to train members in one-to-one lessons. In addition to regular customers, they support adults and juniors with physical or learning disabilities to help improve their hand-eye and mental coordination through regular training and practice.\\
+
+\begin{figure}[h!]
+    \centerline{\includegraphics[width=0.45\linewidth]{uma-logo.png}}
+    \caption{Up-grade Martial Arts Logo}
+    \label{fig:umalogo}
+\end{figure}
+
+The business is growing fast with an influx of new members signing up for the gym, and they have observed double the average number of attendees for lessons. This growth has had a knock-on effect on the business and interaction with its existing system.
+
+\textbf{Lesson sizes were getting too big for the gym space}. The growth in members attending has resulted in larger lesson sizes which are unmanageable in a small location. The business responded by increasing the number of lessons available during the day, which has led to more problems.
+
+\textbf{Net income has not increased at the same rate as membership growth}. Although more members are attending, net income and profit have not seen the same increase. When cross-referenced with payments, an analysis of the attendance records shows that members attend lessons without paying. After further examination, receptionists expressed confusion about what members had paid for monthly bulk purchases and when they expired.
+
+\textbf{Receptionist remains part-time due to low increase in revenue}. With the increased working hours and the limited increase in revenue, the receptionist can only be employed part-time. As a result, other staff members are administering the currently improvised system.
+
+\textbf{Inconsistencies and errors in data input}. Due to more staff being involved in using the existing system, it has broken down with data input becoming inconsistent, longer member information lookup times and, in extreme cases, data loss due to misplaced forms or unsaved changes in spreadsheets.
+
+\textbf{With larger and numerous lessons also comes the issue of health and safety}. With more members attending lessons, especially members with learning disabilities and juniors, maintaining accurate records of members and what lessons they attend is vital in an emergency such as an injury or fire. Due to the manual searching of unorganised paper records, the current speed for member information lookup can range anywhere from 30 seconds to 3 minutes.
+
+\textbf{Ultimately, the current system is unsustainable with growth}. This system consisting of pen-and-paper member records in combination with attendance spreadsheets and printout price lists has become the crux of all these issues. The system cannot scale with the business needs and has cost them a considerable financial amount. For these reasons, a new system has been implemented to solve these issues and assist the business in its growth. 
+
+
+%----------------------------------------------------------------------------------------
+%	2. Project objectives
+%----------------------------------------------------------------------------------------
+\section{Project objectives}
+The primary objectives of this project have been to build a bespoke system that tracks and accurately stores business-critical data, meets the business' complex pricing requirements and provides valuable analytical data for making informed business decisions. In addition, this new system must unify the data entry method and provide insightful analytic data using the stored data.
+
+Considerations for accessibility, ease of use and searchability are vital to a system working with vast amounts of data. In addition, care must be taken to prevent erroneous data entry, error states and problems associated with multi-user access.
+
+The primary objectives of this project included the following:
+\begin{itemize}
+    \item \textbf{Ease of use and searchability} - receptionists must be able to find member information within 5 seconds and attendance for a lesson within 10 seconds. The current system takes over a minute to find, which is unacceptable in an emergency.
+    \item \textbf{Track members, their purchases and lesson attendance} - managers and receptionists need suitable storage of this information to ensure members have paid for the lessons they attend.
+    \item \textbf{Allow accessibility across multiple and different devices} - receptionists will use this system on-premises; however, managers will need access to statistics from any location at any time.
+    \item \textbf{Provide valuable and insightful analytics} - managers must complete tax returns involving total income for a given period and make informed business decisions based on member signup and attendance data.
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+%	3. Limitations of scope
+%----------------------------------------------------------------------------------------
+\section{Limitations of scope}
+
+Due to the extensive scope of this project, non-critical components and future considerations were omitted. However, these can be explored as additional features after the project's completion. The limitations include the following:
+\begin{itemize}
+    \item \textbf{Expense tracking} - The business has many outgoing payments, which vary in amount, service, method and many more. It would significantly increase the functional requirements to include this functionality and does not relate to customer relationship management.
+    \item \textbf{Member login access to the system} - Different access levels would complicate the system, increasing the signup function's complexity. The added surface area for an attack would also negatively impact the system, especially for a short development project.
+    \item \textbf{Considerations for multi-site} - With plans to expand once income increases, the system may need to support multiple sites. Although the system is online, specific handling of sites and spaces is an optional feature that can be considered in the future.
+    \item \textbf{Interaction with the cash draw and printer} - Access to physical devices would require accompanying software to connect and provide control. This functionality would result in two separate pieces of software. 
+    \item \textbf{Interaction with online card payment systems} - A card payment system is already in operation, though it does not support API interaction to integrate.
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+%	4. Dissertation outline
+%----------------------------------------------------------------------------------------
+\section{Dissertation outline}
+
+In this chapter, \textbf{Chapter 1}, we have introduced the business and its problems, the objectives which the software artefact must cover and what lies out of scope in this work. In the next chapter, \textbf{Chapter 2}, we will cover the research conducted into the operations and ethos of Up-grade Martial Arts and competitor analysis of existing software completed during the planning stages. \textbf{Chapter 3} discusses the development methodology utilised and tools employed during development. \textbf{Chapter 4} covers the complete architecture of the system, starting with a top-down view and then moving into each component's design and implementation. \textbf{Chapter 5} details the project's management throughout its lifecycle and the testing conducted to ensure correct operation. \textbf{Chapter 6} discusses considerations for the software's legal, social and ethical impact. Finally, we conclude with \textbf{Chapter 7}, a reflection on the process, the final software product and future considerations should this project be continued post-graduation.

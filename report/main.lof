@@ -1,0 +1,62 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Up-grade Martial Arts Logo\relax }}{1}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Consent to create the application and use business copyrighted assets during development\relax }}{7}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces HubSpot customer management panel\relax }}{9}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Invoice Ninja customer management panel\relax }}{9}{figure.caption.25}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Screenshot of MacOS computer statistics used in development\relax }}{11}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Screenshot of Visual Studio Code Editor\relax }}{12}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Screenshot of Git Help Output\relax }}{13}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Screenshot of GitHub repository when intialised\relax }}{13}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Screenshot of the Firefox Web Browser\relax }}{14}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Screenshot of the Postman API Tool\relax }}{15}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Screenshot of PgAdmin4 Interface for Accessing the Database\relax }}{15}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Screenshot of the Docker Dashboard with Running Containers\relax }}{16}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Screenshot of Trello Running in Firefox\relax }}{17}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The Waterfall Development Method\relax }}{18}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces The Agile Iterative Development Method\relax }}{18}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces The Feature-Driven Development Method\relax }}{18}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces A Gantt Chart of the planning phase of this Project\relax }}{19}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces A Gantt Chart of the sprint development phase of this Project\relax }}{20}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Screenshot of First 4 Weeks Tracked on Trello\relax }}{20}{figure.caption.51}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Token generation from single lesson purchase\relax }}{23}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multiple tokens generated from monthly lesson purchase\relax }}{24}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagram of the 3-tier system architecture\relax }}{25}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Entity relationship diagram showing the planned database table structure\relax }}{26}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Swagger editor showing API routes available\relax }}{27}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces API design architecture example using login route\relax }}{28}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Navigation wireframe design for mobile (left) and desktop (right)\relax }}{29}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Dashboard wireframe design\relax }}{30}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Members wireframe design\relax }}{30}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Lessons wireframe design\relax }}{31}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Attendances wireframe design\relax }}{31}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Purchases wireframe design\relax }}{31}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Payments wireframe design\relax }}{32}{figure.caption.79}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Implemented login screen including logo and form\relax }}{34}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Database connection component using environment variables to connect\relax }}{34}{figure.caption.85}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Salted and hash encrypted password\relax }}{35}{figure.caption.86}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Implemented members page\relax }}{35}{figure.caption.87}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces If check for adding or updating a member's record\relax }}{36}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Lesson types sql schema\relax }}{37}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Lesson types sql seed\relax }}{37}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Lesson view sql schema\relax }}{37}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Implemented lessons page with form and table\relax }}{38}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Custom drop-down menu using data fetched from the API\relax }}{38}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Database view of lesson pricing table with left joined lesson type and purchase type\relax }}{39}{figure.caption.96}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Update route for lesson pricing\relax }}{39}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Database payments table tracks total without links\relax }}{40}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Token table schema\relax }}{41}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Code to generate tokens on lesson purchase\relax }}{42}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Attendance implemented screen\relax }}{43}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Dashboard implemented screen\relax }}{43}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Server hosting the web application\relax }}{44}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Website secured with Let's Encrypt SSL certificate\relax }}{45}{figure.caption.109}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

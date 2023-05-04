@@ -1,0 +1,103 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Declaration of Authorship}{iii}{section*.1}%
+\contentsline {chapter}{Acknowledgements}{v}{section*.2}%
+\contentsline {chapter}{Abstract}{vii}{section*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.7}%
+\contentsline {section}{\numberline {1.1}Project motivation}{1}{section.8}%
+\contentsline {section}{\numberline {1.2}Project objectives}{2}{section.10}%
+\contentsline {section}{\numberline {1.3}Limitations of scope}{3}{section.11}%
+\contentsline {section}{\numberline {1.4}Dissertation outline}{4}{section.12}%
+\contentsline {chapter}{\numberline {2}Literature research}{5}{chapter.13}%
+\contentsline {section}{\numberline {2.1}Company research}{5}{section.14}%
+\contentsline {subsection}{\numberline {2.1.1}Meetings}{5}{subsection.15}%
+\contentsline {subsection}{\numberline {2.1.2}User stories}{6}{subsection.17}%
+\contentsline {subsection}{\numberline {2.1.3}Document acquisition}{7}{subsection.19}%
+\contentsline {subsection}{\numberline {2.1.4}Results of research}{7}{subsection.21}%
+\contentsline {section}{\numberline {2.2}Competitor analysis}{8}{section.22}%
+\contentsline {chapter}{\numberline {3}Methodology}{11}{chapter.26}%
+\contentsline {section}{\numberline {3.1}Development tools}{11}{section.27}%
+\contentsline {subsection}{\numberline {3.1.1}Operating System -- MacOS}{11}{subsection.28}%
+\contentsline {subsection}{\numberline {3.1.2}Editor - Visual Studio Code}{12}{subsection.30}%
+\contentsline {subsection}{\numberline {3.1.3}Version Control -- Git and GitHub}{13}{subsection.32}%
+\contentsline {subsection}{\numberline {3.1.4}Web Browser -- Firefox}{14}{subsection.35}%
+\contentsline {subsection}{\numberline {3.1.5}API Interaction -- Postman}{14}{subsection.37}%
+\contentsline {subsection}{\numberline {3.1.6}Database Management System -- PostgreSQL}{15}{subsection.39}%
+\contentsline {subsection}{\numberline {3.1.7}Deployment - Docker}{16}{subsection.41}%
+\contentsline {subsection}{\numberline {3.1.8}Project Tracking -- Trello}{16}{subsection.43}%
+\contentsline {section}{\numberline {3.2}Development approach}{17}{section.45}%
+\contentsline {chapter}{\numberline {4}Product description}{21}{chapter.52}%
+\contentsline {section}{\numberline {4.1}System requirements}{21}{section.53}%
+\contentsline {section}{\numberline {4.2}Problem solving}{23}{section.58}%
+\contentsline {section}{\numberline {4.3}System architecture}{24}{section.61}%
+\contentsline {subsection}{\numberline {4.3.1}Software type}{24}{subsection.62}%
+\contentsline {subsection}{\numberline {4.3.2}Software structure}{24}{subsection.63}%
+\contentsline {section}{\numberline {4.4}Database design}{25}{section.65}%
+\contentsline {section}{\numberline {4.5}API design}{27}{section.67}%
+\contentsline {section}{\numberline {4.6}User interface design}{28}{section.70}%
+\contentsline {subsection}{\numberline {4.6.1}User experience}{29}{subsection.71}%
+\contentsline {subsection}{\numberline {4.6.2}Wireframes}{29}{subsection.72}%
+\contentsline {chapter}{\numberline {5}Project management}{33}{chapter.80}%
+\contentsline {section}{\numberline {5.1}Project life cycle}{33}{section.81}%
+\contentsline {subsection}{\numberline {5.1.1}Environment setup}{33}{subsection.82}%
+\contentsline {subsection}{\numberline {5.1.2}MVP - Login and Members}{33}{subsection.83}%
+\contentsline {subsection}{\numberline {5.1.3}Sprint 1 - Lessons}{36}{subsection.89}%
+\contentsline {subsection}{\numberline {5.1.4}Sprint 2 - Lesson Pricing}{39}{subsection.95}%
+\contentsline {subsection}{\numberline {5.1.5}Sprint 3 - Lesson Purchasing}{40}{subsection.98}%
+\contentsline {subsection}{\numberline {5.1.6}Sprint 4 - Tokens}{41}{subsection.100}%
+\contentsline {subsection}{\numberline {5.1.7}Sprint 5 - Attendance}{42}{subsection.103}%
+\contentsline {subsection}{\numberline {5.1.8}Sprint 6 - Statistics and Metrics}{43}{subsection.105}%
+\contentsline {subsection}{\numberline {5.1.9}Sprint 7 - Final Deployment}{44}{subsection.107}%
+\contentsline {subsection}{\numberline {5.1.10}Sprint 8 - Bug Fixing and Report}{44}{subsection.110}%
+\contentsline {section}{\numberline {5.2}Software testing}{45}{section.111}%
+\contentsline {subsection}{\numberline {5.2.1}Testing methods}{45}{subsection.112}%
+\contentsline {subsection}{\numberline {5.2.2}Code verification}{46}{subsection.113}%
+\contentsline {subsection}{\numberline {5.2.3}Database testing}{46}{subsection.114}%
+\contentsline {subsection}{\numberline {5.2.4}API testing}{46}{subsection.115}%
+\contentsline {subsection}{\numberline {5.2.5}UI testing}{46}{subsection.116}%
+\contentsline {section}{\numberline {5.3}Risk management}{47}{section.117}%
+\contentsline {subsection}{\numberline {5.3.1}Mitigation plan}{47}{subsection.118}%
+\contentsline {subsection}{\numberline {5.3.2}Problems faced}{47}{subsection.120}%
+\contentsline {chapter}{\numberline {6}Professional issues}{49}{chapter.121}%
+\contentsline {section}{\numberline {6.1}Data protection}{49}{section.122}%
+\contentsline {subsection}{\numberline {6.1.1}Synthetic data}{49}{subsection.123}%
+\contentsline {subsection}{\numberline {6.1.2}Data capture}{49}{subsection.124}%
+\contentsline {subsection}{\numberline {6.1.3}Data retention}{50}{subsection.125}%
+\contentsline {section}{\numberline {6.2}Software security}{50}{section.126}%
+\contentsline {subsection}{\numberline {6.2.1}Secure data transfer}{50}{subsection.127}%
+\contentsline {subsection}{\numberline {6.2.2}SQL injection attack}{51}{subsection.128}%
+\contentsline {subsection}{\numberline {6.2.3}Server hacking}{51}{subsection.129}%
+\contentsline {subsection}{\numberline {6.2.4}Vulnerabilities}{51}{subsection.130}%
+\contentsline {section}{\numberline {6.3}Ethical concerns}{51}{section.131}%
+\contentsline {chapter}{\numberline {7}Conclusion}{53}{chapter.132}%
+\contentsline {section}{\numberline {7.1}Project summary}{53}{section.133}%
+\contentsline {section}{\numberline {7.2}Personal reflection}{53}{section.134}%
+\contentsline {section}{\numberline {7.3}Future work}{55}{section.135}%
+\contentsline {chapter}{Bibliography}{57}{chapter*.136}%
+\contentsline {chapter}{\numberline {A}Project Links}{59}{appendix.137}%
+\contentsline {section}{\numberline {A.1}Github}{59}{section.138}%
+\contentsline {section}{\numberline {A.2}Deployemnt}{59}{section.139}%
+\contentsline {section}{\numberline {A.3}Trello}{59}{section.140}%
+\contentsline {section}{\numberline {A.4}Trello}{59}{section.141}%
+\contentsline {chapter}{\numberline {B}Supervisor Meeting Notes}{61}{appendix.142}%
+\contentsline {section}{\numberline {B.1}5th October 2022}{61}{section.143}%
+\contentsline {section}{\numberline {B.2}12th October 2022}{61}{section.144}%
+\contentsline {section}{\numberline {B.3}24th October 2022}{61}{section.145}%
+\contentsline {section}{\numberline {B.4}7th November 2022}{62}{section.146}%
+\contentsline {section}{\numberline {B.5}21st November 2022}{62}{section.147}%
+\contentsline {section}{\numberline {B.6}7th December 2022}{62}{section.148}%
+\contentsline {section}{\numberline {B.7}14th December 2022}{62}{section.149}%
+\contentsline {section}{\numberline {B.8}19th December 2022}{62}{section.150}%
+\contentsline {section}{\numberline {B.9}17th January 2023}{63}{section.151}%
+\contentsline {section}{\numberline {B.10}27th March 2023}{63}{section.152}%
+\contentsline {section}{\numberline {B.11}4th April 2023}{63}{section.153}%
+\contentsline {section}{\numberline {B.12}11th April 2023}{63}{section.154}%
+\contentsline {section}{\numberline {B.13}18th April 2023}{63}{section.155}%
+\contentsline {section}{\numberline {B.14}25th April 2023}{63}{section.156}%
+\contentsline {section}{\numberline {B.15}2nd May 2023}{64}{section.157}%
+\contentsline {chapter}{\numberline {C}Business Documents and Assets}{65}{appendix.158}%
+\contentsline {section}{\numberline {C.1}Logo}{65}{section.159}%
+\contentsline {section}{\numberline {C.2}Colour scheme}{65}{section.160}%
+\contentsline {section}{\numberline {C.3}Signup form}{66}{section.161}%
+\contentsline {section}{\numberline {C.4}Price list}{67}{section.162}%
+\contentsline {section}{\numberline {C.5}Attendance Spreadsheet Sample}{68}{section.163}%
+\contentsline {section}{\numberline {C.6}Website}{68}{section.164}%

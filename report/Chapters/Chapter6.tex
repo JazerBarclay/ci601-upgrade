@@ -1,0 +1,84 @@
+%----------------------------------------------------------------------------------------
+%	Professional isues
+%----------------------------------------------------------------------------------------
+\chapter{Professional issues} % Main chapter title
+\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter6}
+
+This section covers the professional issues concerned with the project, including the impact of legal requirements, the social implications of the software and the ethical code of conduct for the business when utilising the software.
+
+
+%----------------------------------------------------------------------------------------
+%	1. Data protection
+%----------------------------------------------------------------------------------------
+
+\section{Data protection}
+The General Data Protection Regulation 2016 (GDPR) and Data Protection Act 2018 (DPA) laws require UK businesses to abide by specific criteria when working with customers' private, personally identifiable data. One of the core tenets is securing personal data against public access or attacks from malicious parties such as hackers. As a result, many methods were implemented and incorporated into the project's development to prevent the unnecessary transfer or collection of private data.
+
+
+\subsection{Synthetic data}
+During development and testing, synthetic data was used to remove the possibility of customer data being leaked through the project's version control system and deployments. With no access to the customer records, no prejudice or manipulation of data could occur. In combination with this, the customer's privacy is kept intact, which abides by the law. Using this data would require getting written permission from the business's customers.
+
+
+\subsection{Data capture}
+Another critical legal requirement component is minimising data captured for storage and only recording what is required for the business to operate. Excessive storage is detrimental to both the customer and the company. 
+
+In the event of a breach, the impact would be worse than necessary since more private information could be exposed. More insidious would be using this data to target individuals, which is invasive and could endanger the customer.
+
+This is also not beneficial as a business proposition. The higher requirement for customers when working with the business combined with higher running costs for collection and storage would result in customer dissatisfaction and increased business expenses.
+
+
+\subsection{Data retention}
+According to the Companies Act 2006 \parencite{participation_companies_nodate}, a business must hold financial records for at least six years. These accounts are currently compiled from the till receipt carbon copies. This compilation is time-consuming and requires recalculating every month and year.
+
+The developed system is more than capable of storing this information almost indefinitely. Moreover, the data can be recalculated nearly instantaneously and for any time range asked. Since the data must be sent in tax returns, there will always be two copies of the financial records in case an audit is required.
+
+
+%----------------------------------------------------------------------------------------
+%	2. Software security
+%----------------------------------------------------------------------------------------
+
+\section{Software security}
+The software must be secure to abide by the legal requirements of keeping the data safe. Therefore, multiple methods and measures were taken to ensure the data was not accessible without authentication and verification of identity.
+
+The login system provides the first layer of protection through access control. The interface is not accessible for making requests to the API, preventing the majority of the general public from clicking through and requesting data. 
+
+The API provides the second layer. Endpoints that access data require a valid JSON Web Token issued by the server to complete the request successfully. In combination, the queries are predefined to prevent querying for unauthorised data.
+
+Finally, the database is completely isolated from the public internet, making it the third and final layer. The connection would require hacking the server where the data is stored and cracking the login details.
+
+
+\subsection{Secure data transfer}
+Since the data is transmitted from potentially unsafe connections, data must be transferred securely to prevent an attacker from capturing the information in transit.
+
+The server is configured with SSL encryption through a server application called CertBot. This software generates a certificate through Let's Encrypt, a public, free-to-use certificate service to secure websites. The certificate is generated for the domain name and allows the data sent to be encrypted and sent to the server. There, the data can be unencrypted for actions to be performed.
+
+To bypass this security, the attacker would need access to the server to intercept the requests. So at this point, the issue would no longer be in the transmission security but in the server's security.
+
+
+\subsection{SQL injection attack}
+An SQL injection attack is a carefully crafted request that bypasses the original query and returns different data from other locations in the database. This is a tactic many hackers and penetration testers use to attempt to access a networked system.
+
+The Upgrade CRM system actively prevents these injection attacks by validating incoming requests through the API. The values are passed through checks to ensure the data is valid and special characters often used in this attack are escaped.
+
+
+\subsection{Server hacking}
+The server is another point of attack which a malicious actor may want to try compromising. An attempt could be password guessing. The number of attempts is inconsequential since password access is disabled from use. Only keys are used to access the system and only as a non-privileged user. To perform admin tasks, the user must know the admin password, which would require slow attempts, and access logs would show a new logged-in user from their connection location.
+
+
+\subsection{Vulnerabilities}
+Over time new vulnerabilities are discovered in existing systems, such as operating systems and software packages.
+
+To combat this in deployment, the server uses automatic updates configured to download and update when new security updates are available. In addition, the server restarts are automated to run at 3 am to prevent potential downtime during work hours.
+
+As for the packages used in the React interface and NodeJS API, GitHub supports the monitoring of projects through a bot. This bot provides more than just monitoring but also updates through a new git branch which can be merged into the main branch. By using a different branch, a developer can perform a code review before implementing the patch or fix. 
+
+
+%----------------------------------------------------------------------------------------
+%	3. Ethical concerns
+%----------------------------------------------------------------------------------------
+\section{Ethical concerns}
+A business has a responsibility and legal obligation to keep the customer in mind when operating.
+
+Spam emails have been a concern since its wide adoption in the early 2000s. As a result, in recent years there have been requirements to allow recipients of marketing emails the option to unsubscribe from mailing lists. 
+
+The application tracks member emails for contact about pricing updates and special events. Members can request to avoid being contacted via email through their member details.
